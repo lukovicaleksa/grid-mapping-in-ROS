@@ -16,9 +16,9 @@ def log_odds(p):
 	"""
 	Log odds ratio of p(x):
 
-				   p(x)
+		       p(x)
 	 l(x) = log ----------
-				 1 - p(x)
+		     1 - p(x)
 
 	"""
 	return np.log(p / (1 - p))
@@ -28,9 +28,9 @@ def retrieve_p(l):
 	"""
 	Retrieve p(x) from log odds ratio:
 
-	 				  1
+	 		   1
 	 p(x) = 1 - ---------------
-				 1 + exp(l(x))
+		     1 + exp(l(x))
 
 	"""
 	return 1 - 1 / (1 + np.exp(l))
