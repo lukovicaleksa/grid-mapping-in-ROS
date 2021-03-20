@@ -2,8 +2,8 @@
 Creating Occupancy Grid Maps using Static State Bayes filter in ROS.
 
 * bagfiles are created by manually driving the robot with turtlebot3_teleop, topics recorded: '/scan' and '/odom'
-* grid maps can be created from bagfiles using ([scripts/create_from_rosbag.py](create_from_rosbag.py))
-* grid maps can be created in real time using ([scripts/rtime_gmapping_node.py](rtime_gmapping_node.py))
+* grid maps can be created from bagfiles using [create_from_rosbag.py](scripts/create_from_rosbag.py)
+* grid maps can be created in real time using [rtime_gmapping_node.py](scripts/rtime_gmapping_node.py)
 
 Content:
 * [bagfiles](bagfiles) -> folder containing recorded rosbag files
