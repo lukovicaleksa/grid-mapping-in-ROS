@@ -19,7 +19,7 @@ from message_handler import *
 from utils import *
 
 P_prior = 0.5	# Prior occupancy probability
-P_occ = 0.9		# Probability that cell is occupied with total confidence
+P_occ = 0.9	# Probability that cell is occupied with total confidence
 P_free = 0.3	# Probability that cell is free with total confidence 
 
 RESOLUTION = 0.04 # Grid resolution in [m]
