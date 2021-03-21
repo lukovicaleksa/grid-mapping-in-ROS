@@ -126,8 +126,8 @@ if __name__ == '__main__':
 
 		# Saving Grid Map
 		resized_image = cv2.resize(src = gridMap.to_BGR_image(), 
-						 dsize = (500, 500), 
-						 interpolation = cv2.INTER_AREA)
+					   dsize = (500, 500), 
+					   interpolation = cv2.INTER_AREA)
 
 		rotated_image = cv2.rotate(src = resized_image, 
 					   rotateCode = cv2.ROTATE_90_COUNTERCLOCKWISE)
