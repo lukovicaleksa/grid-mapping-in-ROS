@@ -6,13 +6,13 @@ Creating Occupancy Grid Maps using Static State Bayes filter and Bresenham's alg
 * grid maps can be created from bagfiles using [create_from_rosbag.py](scripts/create_from_rosbag.py)
 * grid maps can be created in real time using [rtime_gmapping_node.py](scripts/rtime_gmapping_node.py)
 
-Content:
+# Content
 * [bagfiles](bagfiles) -> folder containing recorded rosbag files
 * [maps](maps) -> folder containing images of Gazebo maps as well as output grid maps
 * [papers](papers) -> materials used for the project 
 * [scripts](scripts) -> python scripts 
 
-Results:
+# Results
 
 ![stage_4_compared](https://user-images.githubusercontent.com/72970001/111869094-eae92f80-897d-11eb-8ad8-7cfb21e23eaf.png)
 
