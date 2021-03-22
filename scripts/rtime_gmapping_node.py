@@ -16,7 +16,7 @@ from grid_map import *
 from utils import *
 
 P_prior = 0.5	# Prior occupancy probability
-P_occ = 0.9		# Probability that cell is occupied with total confidence
+P_occ = 0.9	# Probability that cell is occupied with total confidence
 P_free = 0.3	# Probability that cell is free with total confidence 
 
 RESOLUTION = 0.03 # Grid resolution in [m]
@@ -49,9 +49,9 @@ if __name__ == '__main__':
 
 		# Create grid map 
 		gridMap = GridMap(X_lim = map_x_lim, 
-						  Y_lim = map_y_lim, 
-						  resolution = RESOLUTION, 
-						  p = P_prior)
+				  Y_lim = map_y_lim, 
+				  resolution = RESOLUTION, 
+				  p = P_prior)
 
 		# Init time
 		t_start = perf_counter()
@@ -114,11 +114,11 @@ if __name__ == '__main__':
 				set_pixel_color(bgr_image, x, y, 'GREEN')
 
 			resized_image = cv2.resize(src = bgr_image, 
-									   dsize = (500, 500), 
-									   interpolation = cv2.INTER_AREA)
+						   dsize = (500, 500), 
+						   interpolation = cv2.INTER_AREA)
 
 			rotated_image = cv2.rotate(src = resized_image, 
-									   rotateCode = cv2.ROTATE_90_COUNTERCLOCKWISE)
+						   rotateCode = cv2.ROTATE_90_COUNTERCLOCKWISE)
 
 			cv2.imshow("Grid map", rotated_image)
 			cv2.waitKey(1)
@@ -143,28 +143,28 @@ if __name__ == '__main__':
 
 		# Saving Grid Map
 		resized_image = cv2.resize(src = gridMap.to_BGR_image(), 
-								   dsize = (500, 500), 
-								   interpolation = cv2.INTER_AREA)
+					   dsize = (500, 500), 
+					   interpolation = cv2.INTER_AREA)
 
 		rotated_image = cv2.rotate(src = resized_image, 
-								   rotateCode = cv2.ROTATE_90_COUNTERCLOCKWISE)
+					   rotateCode = cv2.ROTATE_90_COUNTERCLOCKWISE)
 
 		flag_1 = cv2.imwrite(img = rotated_image * 255.0, 
-				             filename = MAPS_PATH + '/' + MAP_NAME + '_grid_map_TEST.png')
+				     filename = MAPS_PATH + '/' + MAP_NAME + '_grid_map_TEST.png')
 
 		# Calculating Maximum likelihood estimate of the map
 		gridMap.calc_MLE()
 
 		# Saving MLE of the Grid Map
 		resized_image_MLE = cv2.resize(src = gridMap.to_BGR_image(), 
-									   dsize = (500, 500), 
-									   interpolation = cv2.INTER_AREA)
+					       dsize = (500, 500), 
+					       interpolation = cv2.INTER_AREA)
 
 		rotated_image_MLE = cv2.rotate(src = resized_image_MLE, 
-								       rotateCode = cv2.ROTATE_90_COUNTERCLOCKWISE)
+					       rotateCode = cv2.ROTATE_90_COUNTERCLOCKWISE)
 
 		flag_2 = cv2.imwrite(img = rotated_image_MLE * 255.0, 
-				             filename = MAPS_PATH + '/' + MAP_NAME + '_grid_map_TEST_mle.png')
+				     filename = MAPS_PATH + '/' + MAP_NAME + '_grid_map_TEST_mle.png')
 
 		if flag_1 and flag_2:
 			print('\nGrid map successfully saved!\n')
