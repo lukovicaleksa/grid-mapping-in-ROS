@@ -14,6 +14,8 @@ Creating Occupancy Grid Maps using Static State Bayes filter and Bresenham's alg
 
 # Results
 
+![real_time_gmapping](https://user-images.githubusercontent.com/72970001/111978505-3e858580-8b04-11eb-9726-74e98ce94b16.gif)
+
 ![stage_4_compared](https://user-images.githubusercontent.com/72970001/111869094-eae92f80-897d-11eb-8ad8-7cfb21e23eaf.png)
 
 ![world_compared](https://user-images.githubusercontent.com/72970001/111869096-ecb2f300-897d-11eb-80fe-5737be27f72b.png)
