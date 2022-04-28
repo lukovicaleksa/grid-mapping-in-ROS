@@ -1,6 +1,6 @@
 
 # grid-mapping-in-ROS
-Creating Occupancy Grid Maps using Static State Bayes filter and Bresenham's algorithm in ROS.
+Creating Occupancy Grid Maps using Static State Bayes filter and Bresenham's algorithm for mobile robot (turtlebot3_burger) in ROS.
 
 * bagfiles are created by manually driving the robot with turtlebot3_teleop, topics recorded: '/scan' and '/odom'
 * grid maps can be created from bagfiles using [create_from_rosbag.py](scripts/create_from_rosbag.py)
